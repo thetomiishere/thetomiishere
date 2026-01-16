@@ -1,0 +1,271 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #b2c1cc;
+    margin: 0;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #b2c1cc;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    background-color: #b2c1cc;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #9ca3af; /*#6b7280*/
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Main Content Area */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+}
+
+/* Content Area */
+.content {
+    width: 100%;
+    padding: 20px 25px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    max-width: 80vw;
+    height: 100vh;
+    color: #b2c1cc;
+    background: #516479;  /*#fff*/
+    /*border-right: 1px solid #333; #e5e7eb*/
+    padding: 20px;
+    z-index: 1000; 
+
+    /* hide it */
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar h2, 
+.sidebar nav a {
+    font-size: 16px;
+    font-weight: 600; /* Adjust this to 700 if you want it bolder */
+    color: #b2c1cc;
+    text-decoration: none;
+    text-transform: uppercase; /* Optional: matches many sidebar designs */
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar Header specific spacing */
+.sidebar h2 {
+    margin-bottom: 20px;
+    display: block;
+}
+
+.sidebar .dept {
+    background: #2a2a2a;  /*#f1f5f9*/
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+}
+
+.sidebar nav a:hover {
+    color: #ffffff;
+}
+
+/* Maintain your Active state style */
+.sidebar a.active, 
+.sidebar nav a.active {
+    background: #ccc;
+    color: #000 !important;
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
+/* Topbar */
+.topbar {
+    background: #b2c1cc;  /*#eef2f7*/
+    color: #516479;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.menu-btn {
+    background: #b2c1cc;
+    color: #516479;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 30px;
+    display: flex;
+    align-items: left;
+    gap: 8px;
+}
+
+.menu-btn:hover {
+    transform: translateY(-5px);
+}
+
+.user-info {
+    color: #516479;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+/* Table Header */
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    color: #516479;
+}
+
+/* The Grid System */
+.grid-container {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));*/
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-container p{
+    color: #516479;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile: 3 columns (As you requested) */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px; /* Tighter gap so cards can be wider */
+    }
+    
+    .main { padding: 10px; } /* Reduce main padding to give cards more room */
+    .content { padding: 10px 5px; }
+}
+
+/* The Card Design */
+.grid-container .card {
+    background: #516479;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid-container .card:hover {
+    transform: translateY(-5px);
+}
+
+.grid-container .image-container img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover; /* Keeps image proportions clean */
+    background-color: #ddd;
+    display: block;
+}
+
+.grid-container .card-content {
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.grid-container .id-badge {
+    color: #b2c1cc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.grid-container h4 {
+    margin: 5px 0;
+    font-size: clamp(0.6rem, 1.5vw, 1.1rem);/* Shrinks font as screen shrinks */
+    overflow: hidden;
+    color: #b2c1cc;
+}
+
+.grid-container .info-date,
+.grid-container .info-ft{
+    font-size: clamp(0.5rem, 1.2vw, 0.85rem);
+    color: #b2c1cc;
+    margin-bottom: 10px;
+}
+
+.grid-container .view-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background: #ebfd43;
+    color: #516479;
+    text-decoration: none;
+    padding: 5px;
+    font-size: clamp(0.5rem, 1.2vw, 0.9rem);
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.grid-container .view-btn:hover {
+    background: #8f9b29;
+}
+
+/*
+b2c1cc
+516479
+ebfd43
+ffffff
+*/
