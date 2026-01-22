@@ -1,1 +1,11 @@
-function _0x3e5f(_0xf2fb02,_0x965df9){_0xf2fb02=_0xf2fb02-0x7b;const _0x5bc2ed=_0x5bc2();let _0x3e5f4a=_0x5bc2ed[_0xf2fb02];return _0x3e5f4a;}const _0x4d6a2a=_0x3e5f;(function(_0x11f061,_0x2dcbc8){const _0x5a3a8a=_0x3e5f,_0x1b6967=_0x11f061();while(!![]){try{const _0x2506e9=parseInt(_0x5a3a8a(0x7b))/0x1*(parseInt(_0x5a3a8a(0x87))/0x2)+-parseInt(_0x5a3a8a(0x81))/0x3+parseInt(_0x5a3a8a(0x82))/0x4*(-parseInt(_0x5a3a8a(0x7d))/0x5)+-parseInt(_0x5a3a8a(0x83))/0x6+parseInt(_0x5a3a8a(0x85))/0x7+parseInt(_0x5a3a8a(0x80))/0x8+parseInt(_0x5a3a8a(0x88))/0x9;if(_0x2506e9===_0x2dcbc8)break;else _0x1b6967['push'](_0x1b6967['shift']());}catch(_0x36faa9){_0x1b6967['push'](_0x1b6967['shift']());}}}(_0x5bc2,0xa74c9));function _0x5bc2(){const _0x5d62bc=['24324yhCZtU','10034388IiNUNP','104uoXpXg','Error\x20loading\x20data:','5FCQIPa','?sheet=TAKI','error','489848qrmXMZ','2569392NMEbDT','4575376wuNPSt','6004404NcBuwA','json','8717016vMwUEd','https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec'];_0x5bc2=function(){return _0x5d62bc;};return _0x5bc2();}const SHEET_API_URL=_0x4d6a2a(0x86);export async function loadTAKIData(){const _0xd4b8f2=_0x4d6a2a;try{const _0x48025e=await fetch(SHEET_API_URL+_0xd4b8f2(0x7e));return await _0x48025e[_0xd4b8f2(0x84)]();}catch(_0xa4a724){return console[_0xd4b8f2(0x7f)](_0xd4b8f2(0x7c),_0xa4a724),[];}}
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec"; 
+
+export async function loadTAKIData() {
+    try {
+        const response = await fetch(`${SHEET_API_URL}?sheet=TAKI`);
+        return await response.json();
+    } catch (err) {
+        console.error("Error loading data:", err);
+        return [];
+    }
+}

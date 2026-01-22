@@ -1,1 +1,77 @@
-function _0x4c8f(_0x473bf6,_0x2d2e3f){_0x473bf6=_0x473bf6-0x95;const _0x3e1e70=_0x3e1e();let _0x4c8f5c=_0x3e1e70[_0x473bf6];return _0x4c8f5c;}(function(_0x42622f,_0x44b6e6){const _0x10e87a=_0x4c8f,_0x2f4600=_0x42622f();while(!![]){try{const _0x1731de=parseInt(_0x10e87a(0xa7))/0x1+parseInt(_0x10e87a(0x98))/0x2+-parseInt(_0x10e87a(0x9b))/0x3*(parseInt(_0x10e87a(0xa6))/0x4)+-parseInt(_0x10e87a(0x95))/0x5+-parseInt(_0x10e87a(0x99))/0x6*(parseInt(_0x10e87a(0xb0))/0x7)+parseInt(_0x10e87a(0xa1))/0x8+-parseInt(_0x10e87a(0xb4))/0x9;if(_0x1731de===_0x44b6e6)break;else _0x2f4600['push'](_0x2f4600['shift']());}catch(_0x1cfcb3){_0x2f4600['push'](_0x2f4600['shift']());}}}(_0x3e1e,0x5ff9d));import{loadMAKIData}from'../../services/individual/makiService.js';function _0x3e1e(){const _0x5b2d03=['textContent','length','innerHTML','5865744bQEpPD','appendChild','div','alt','date','4UQnHdK','75995nsupSd','title','Error\x20loading\x20data.','className','img','card','target','src','View\x20Details','20433qyUJsO','_blank','info-ft','view-btn','726354fLYnjU','card-content','519010rVwjKH','null','loading','1212704qphuot','1614xLWyRy','href','158187jcaoZZ','createElement','<p\x20class=\x22no-data\x22>No\x20content\x20found\x20for\x20this\x20member.</p>'];_0x3e1e=function(){return _0x5b2d03;};return _0x3e1e();}import{setPageDisabled}from'../logistics.js';let makiCache=null;export async function maki(){const _0x4a5ab9=_0x4c8f,_0x461a0a=document['getElementById']('maki-grid');if(makiCache){renderData(makiCache,_0x461a0a);return;}try{setPageDisabled(!![]);const _0x4c6cf7=await loadMAKIData();makiCache=_0x4c6cf7,renderData(_0x4c6cf7,_0x461a0a);}catch(_0x28f4c0){_0x461a0a['innerHTML']=_0x4a5ab9(0xa9);}finally{setPageDisabled(![]);}}async function renderData(_0x1c0e25,_0x37db27){const _0x59932e=_0x4c8f;_0x37db27[_0x59932e(0xa0)]='';if(!_0x1c0e25||!_0x1c0e25[_0x59932e(0x9f)]){_0x37db27['innerHTML']=_0x59932e(0x9d);return;}_0x1c0e25['forEach'](_0x23fe22=>{const _0x415c05=_0x59932e,_0x3d6e7a=document[_0x415c05(0x9c)](_0x415c05(0xa3));_0x3d6e7a[_0x415c05(0xaa)]=_0x415c05(0xac);const _0x2f1d28=document[_0x415c05(0x9c)]('div');_0x2f1d28[_0x415c05(0xaa)]='image-container';const _0x29502b=document[_0x415c05(0x9c)]('img');_0x29502b[_0x415c05(0xae)]=_0x23fe22[_0x415c05(0xab)]||'',_0x29502b[_0x415c05(0xa4)]=_0x23fe22['title'],_0x29502b[_0x415c05(0x97)]='lazy',_0x2f1d28[_0x415c05(0xa2)](_0x29502b);const _0x4338b1=document[_0x415c05(0x9c)](_0x415c05(0xa3));_0x4338b1[_0x415c05(0xaa)]=_0x415c05(0xb5);const _0x28b93b=document[_0x415c05(0x9c)]('h4');_0x28b93b[_0x415c05(0x9e)]=_0x23fe22[_0x415c05(0xa8)];const _0x3f8139=document[_0x415c05(0x9c)](_0x415c05(0xa3));_0x3f8139['className']='info-date',_0x3f8139['textContent']=_0x23fe22[_0x415c05(0xa5)];const _0x3fd519=document[_0x415c05(0x9c)](_0x415c05(0xa3));_0x3fd519[_0x415c05(0xaa)]=_0x415c05(0xb2);const _0x375190=_0x23fe22['ft']&&_0x23fe22['ft']!==_0x415c05(0x96)?'FT:\x20'+_0x23fe22['ft']:'\u00a0';_0x3fd519[_0x415c05(0x9e)]=_0x375190;const _0x30e166=document[_0x415c05(0x9c)]('a');_0x30e166['className']=_0x415c05(0xb3),_0x30e166[_0x415c05(0x9a)]=_0x23fe22['link'],_0x30e166[_0x415c05(0xad)]=_0x415c05(0xb1),_0x30e166['textContent']=_0x415c05(0xaf),_0x4338b1[_0x415c05(0xa2)](_0x28b93b),_0x4338b1['appendChild'](_0x3f8139),_0x4338b1[_0x415c05(0xa2)](_0x3fd519),_0x4338b1[_0x415c05(0xa2)](_0x30e166),_0x3d6e7a[_0x415c05(0xa2)](_0x2f1d28),_0x3d6e7a[_0x415c05(0xa2)](_0x4338b1),_0x37db27[_0x415c05(0xa2)](_0x3d6e7a);});}
+import { loadMAKIData } from '../../services/individual/makiService.js';
+import { setPageDisabled } from '../logistics.js';
+
+let makiCache = null;
+export async function maki() {
+    const container = document.getElementById('maki-grid');
+
+    if (makiCache) {
+        renderData(makiCache, container);
+        return;
+    }
+
+    try {
+        setPageDisabled(true);
+        const data = await loadMAKIData();
+        makiCache = data;
+        renderData(data, container);
+    } catch (err) {
+        container.innerHTML = "Error loading data.";
+    } finally {
+        setPageDisabled(false);
+    }
+}
+
+async function renderData(data, container) {
+    container.innerHTML = ''; // Clear "LOADING..."
+
+    if (!data || !data.length) {
+        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        return;
+    }
+
+    data.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = item.img || '';
+        img.alt = item.title;
+        img.loading = 'lazy';
+        imgDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+
+        const title = document.createElement('h4');
+        title.textContent = item.title;
+
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'info-date';
+        dateDiv.textContent = item.date;
+        
+        const ftDiv = document.createElement('div');
+        ftDiv.className = 'info-ft';
+        const ftValue = (item.ft && item.ft !== "null") ? `FT: ${item.ft}` : "\u00A0";
+        ftDiv.textContent = ftValue;
+
+        const viewBtn = document.createElement('a');
+        viewBtn.className = 'view-btn';
+        viewBtn.href = item.link;
+        viewBtn.target = '_blank';
+        viewBtn.textContent = 'View Details';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(dateDiv);
+        contentDiv.appendChild(ftDiv);
+        contentDiv.appendChild(viewBtn);
+
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+
+        container.appendChild(card);
+    });
+}

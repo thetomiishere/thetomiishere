@@ -1,1 +1,20 @@
-function _0x2086(_0x58ec62,_0x3f2228){_0x58ec62=_0x58ec62-0x1a1;const _0x483385=_0x4833();let _0x208600=_0x483385[_0x58ec62];return _0x208600;}(function(_0x542b9e,_0x344e60){const _0x7039e5=_0x2086,_0x1be522=_0x542b9e();while(!![]){try{const _0x414971=-parseInt(_0x7039e5(0x1a8))/0x1*(parseInt(_0x7039e5(0x1a9))/0x2)+parseInt(_0x7039e5(0x1ae))/0x3*(parseInt(_0x7039e5(0x1af))/0x4)+-parseInt(_0x7039e5(0x1a6))/0x5+-parseInt(_0x7039e5(0x1a4))/0x6*(parseInt(_0x7039e5(0x1a5))/0x7)+parseInt(_0x7039e5(0x1b5))/0x8+-parseInt(_0x7039e5(0x1b0))/0x9+-parseInt(_0x7039e5(0x1aa))/0xa*(-parseInt(_0x7039e5(0x1b3))/0xb);if(_0x414971===_0x344e60)break;else _0x1be522['push'](_0x1be522['shift']());}catch(_0x3faa21){_0x1be522['push'](_0x1be522['shift']());}}}(_0x4833,0xe1f6d));function _0x4833(){const _0x5df3f8=['12qPHKxF','151310RRElUu','appendChild','pageOverlay','div','15UkIxDv','1453076GEcVYV','8194986qKWckG','classList','add','1045ajwaqT','body','5775448EfnMNU','remove','spinner','createElement','12KQRVWm','368655mannyI','7430730dNOcFv','page-disabled-overlay','91357adQdrv'];_0x4833=function(){return _0x5df3f8;};return _0x4833();}export function setPageDisabled(_0x167ff6=!![]){const _0x41b5d8=_0x2086;let _0x3aeba2=document['getElementById'](_0x41b5d8(0x1ac));if(_0x167ff6){if(!_0x3aeba2){_0x3aeba2=document[_0x41b5d8(0x1a3)](_0x41b5d8(0x1ad)),_0x3aeba2['id']=_0x41b5d8(0x1ac),_0x3aeba2[_0x41b5d8(0x1b1)][_0x41b5d8(0x1b2)](_0x41b5d8(0x1a7));const _0x30d46b=document[_0x41b5d8(0x1a3)](_0x41b5d8(0x1ad));_0x30d46b['classList']['add'](_0x41b5d8(0x1a2)),_0x3aeba2[_0x41b5d8(0x1ab)](_0x30d46b),document[_0x41b5d8(0x1b4)][_0x41b5d8(0x1ab)](_0x3aeba2);}}else{if(_0x3aeba2)_0x3aeba2[_0x41b5d8(0x1a1)]();}}
+
+
+export function setPageDisabled(disabled = true) {
+    let overlay = document.getElementById('pageOverlay');
+    if (disabled) {
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.id = 'pageOverlay';
+            overlay.classList.add('page-disabled-overlay');
+
+            const spinner = document.createElement('div');
+            spinner.classList.add('spinner');
+            overlay.appendChild(spinner);
+
+            document.body.appendChild(overlay);
+        }
+    } else {
+        if (overlay) overlay.remove();
+    }
+}

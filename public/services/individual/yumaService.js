@@ -1,1 +1,12 @@
-const _0x5bc814=_0x482a;(function(_0x52ee68,_0x245db7){const _0xc3a178=_0x482a,_0x86afdf=_0x52ee68();while(!![]){try{const _0x119ae8=-parseInt(_0xc3a178(0x84))/0x1+parseInt(_0xc3a178(0x8e))/0x2*(-parseInt(_0xc3a178(0x87))/0x3)+-parseInt(_0xc3a178(0x89))/0x4*(parseInt(_0xc3a178(0x8b))/0x5)+parseInt(_0xc3a178(0x8c))/0x6+parseInt(_0xc3a178(0x86))/0x7*(parseInt(_0xc3a178(0x88))/0x8)+-parseInt(_0xc3a178(0x83))/0x9+parseInt(_0xc3a178(0x82))/0xa*(parseInt(_0xc3a178(0x85))/0xb);if(_0x119ae8===_0x245db7)break;else _0x86afdf['push'](_0x86afdf['shift']());}catch(_0x1b1bf5){_0x86afdf['push'](_0x86afdf['shift']());}}}(_0x16ed,0xe631d));const SHEET_API_URL=_0x5bc814(0x8a);function _0x16ed(){const _0x5f2407=['json','5290MBCmuB','11057544wtIPba','540397bWlWhy','61127ICJUFB','21fSAzQW','1950783dXknhe','2863928agNnYz','55496MJlCOi','https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec','165DjCLto','2739768YJVLMQ','?sheet=YUMA','4cbqTwu','Error\x20loading\x20data:'];_0x16ed=function(){return _0x5f2407;};return _0x16ed();}function _0x482a(_0xbdc386,_0x343afe){_0xbdc386=_0xbdc386-0x82;const _0x16ed0c=_0x16ed();let _0x482a99=_0x16ed0c[_0xbdc386];return _0x482a99;}export async function loadYUMAData(){const _0x186b4c=_0x5bc814;try{const _0x5d2e79=await fetch(SHEET_API_URL+_0x186b4c(0x8d));return await _0x5d2e79[_0x186b4c(0x90)]();}catch(_0x24520e){return console['error'](_0x186b4c(0x8f),_0x24520e),[];}}
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec"; 
+
+export async function loadYUMAData() {
+    try {
+        const response = await fetch(`${SHEET_API_URL}?sheet=YUMA`);
+        return await response.json();
+
+    } catch (err) {
+        console.error("Error loading data:", err);
+        return [];
+    }
+}

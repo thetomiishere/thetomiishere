@@ -1,1 +1,77 @@
-(function(_0x393b4f,_0x264ab6){const _0x5a4258=_0xbf74,_0x15dc71=_0x393b4f();while(!![]){try{const _0x2bdcc2=parseInt(_0x5a4258(0x1e9))/0x1*(parseInt(_0x5a4258(0x1e2))/0x2)+-parseInt(_0x5a4258(0x1df))/0x3*(-parseInt(_0x5a4258(0x1d6))/0x4)+-parseInt(_0x5a4258(0x1dc))/0x5+parseInt(_0x5a4258(0x1d7))/0x6+-parseInt(_0x5a4258(0x1eb))/0x7*(-parseInt(_0x5a4258(0x1da))/0x8)+parseInt(_0x5a4258(0x1ea))/0x9*(parseInt(_0x5a4258(0x1f0))/0xa)+-parseInt(_0x5a4258(0x1db))/0xb*(parseInt(_0x5a4258(0x1de))/0xc);if(_0x2bdcc2===_0x264ab6)break;else _0x15dc71['push'](_0x15dc71['shift']());}catch(_0x2f0e8c){_0x15dc71['push'](_0x15dc71['shift']());}}}(_0x5b8d,0xb67f8));import{loadandTEAMData}from'../services/andTeamService.js';import{setPageDisabled}from'./logistics.js';function _0xbf74(_0x121360,_0x478bc6){_0x121360=_0x121360-0x1cb;const _0x5b8d4f=_0x5b8d();let _0xbf7429=_0x5b8d4f[_0x121360];return _0xbf7429;}function _0x5b8d(){const _0x35926e=['createElement','title','andTEAM-grid','forEach','2120SfuPlg','1585428onwNkN','length','img','11393048TWplIR','23551187bUhPBo','7376845nWEsje','WHO:\x20','12XgDFtM','7887hXYHFV','date','alt','76uFfdnm','who','innerHTML','card','src','info-date','getElementById','29293YFTtWo','45DvkGAU','7CGVAvS','href','lazy','link','null','338050ZxDQkL','div','textContent','info-ft','view-btn','className','_blank','appendChild'];_0x5b8d=function(){return _0x35926e;};return _0x5b8d();}let andTEAMCache=null;export async function andTEAM(){const _0x4ba2b1=_0xbf74,_0x4716d0=document[_0x4ba2b1(0x1e8)](_0x4ba2b1(0x1d4));if(andTEAMCache){renderData(andTEAMCache,_0x4716d0);return;}try{setPageDisabled(!![]);const _0x32c90d=await loadandTEAMData();andTEAMCache=_0x32c90d,renderData(_0x32c90d,_0x4716d0);}catch(_0x3bb712){_0x4716d0[_0x4ba2b1(0x1e4)]='Error\x20loading\x20data.';}finally{setPageDisabled(![]);}}async function renderData(_0x4ffe35,_0x4f06b4){const _0xbbcaeb=_0xbf74;_0x4f06b4[_0xbbcaeb(0x1e4)]='';if(!_0x4ffe35||!_0x4ffe35[_0xbbcaeb(0x1d8)]){_0x4f06b4['innerHTML']='<p\x20class=\x22no-data\x22>No\x20content\x20found\x20for\x20this\x20member.</p>';return;}_0x4ffe35[_0xbbcaeb(0x1d5)](_0x3f61dc=>{const _0x33b1e3=_0xbbcaeb,_0x8ac2cf=document['createElement'](_0x33b1e3(0x1cb));_0x8ac2cf[_0x33b1e3(0x1cf)]=_0x33b1e3(0x1e5);const _0x5a9610=document['createElement'](_0x33b1e3(0x1cb));_0x5a9610[_0x33b1e3(0x1cf)]='image-container';const _0xcf07af=document[_0x33b1e3(0x1d2)]('img');_0xcf07af[_0x33b1e3(0x1e6)]=_0x3f61dc[_0x33b1e3(0x1d9)]||'',_0xcf07af[_0x33b1e3(0x1e1)]=_0x3f61dc[_0x33b1e3(0x1d3)],_0xcf07af['loading']=_0x33b1e3(0x1ed),_0x5a9610[_0x33b1e3(0x1d1)](_0xcf07af);const _0x1d8a2b=document['createElement']('div');_0x1d8a2b[_0x33b1e3(0x1cf)]='card-content';const _0x4a5712=document['createElement']('h4');_0x4a5712['textContent']=_0x3f61dc['title'];const _0x4b3227=document['createElement'](_0x33b1e3(0x1cb));_0x4b3227['className']=_0x33b1e3(0x1e7),_0x4b3227['textContent']=_0x3f61dc[_0x33b1e3(0x1e0)];const _0x4ca57f=document[_0x33b1e3(0x1d2)](_0x33b1e3(0x1cb));_0x4ca57f[_0x33b1e3(0x1cf)]=_0x33b1e3(0x1cd);const _0x1aa14d=_0x3f61dc[_0x33b1e3(0x1e3)]&&_0x3f61dc['who']!==_0x33b1e3(0x1ef)?_0x33b1e3(0x1dd)+_0x3f61dc[_0x33b1e3(0x1e3)]:'\u00a0';_0x4ca57f['textContent']=_0x1aa14d;const _0x498877=document[_0x33b1e3(0x1d2)]('a');_0x498877['className']=_0x33b1e3(0x1ce),_0x498877[_0x33b1e3(0x1ec)]=_0x3f61dc[_0x33b1e3(0x1ee)],_0x498877['target']=_0x33b1e3(0x1d0),_0x498877[_0x33b1e3(0x1cc)]='View\x20Details',_0x1d8a2b['appendChild'](_0x4a5712),_0x1d8a2b[_0x33b1e3(0x1d1)](_0x4b3227),_0x1d8a2b[_0x33b1e3(0x1d1)](_0x4ca57f),_0x1d8a2b[_0x33b1e3(0x1d1)](_0x498877),_0x8ac2cf[_0x33b1e3(0x1d1)](_0x5a9610),_0x8ac2cf['appendChild'](_0x1d8a2b),_0x4f06b4[_0x33b1e3(0x1d1)](_0x8ac2cf);});}
+import { loadandTEAMData } from '../services/andTeamService.js';
+import { setPageDisabled } from './logistics.js';
+
+let andTEAMCache = null;
+export async function andTEAM() {
+    const container = document.getElementById('andTEAM-grid');
+
+    if (andTEAMCache) {
+        renderData(andTEAMCache, container);
+        return;
+    }
+
+    try {
+        setPageDisabled(true);
+        const data = await loadandTEAMData();
+        andTEAMCache = data;
+        renderData(data, container);
+    } catch (err) {
+        container.innerHTML = "Error loading data.";
+    } finally {
+        setPageDisabled(false);
+    }
+}
+
+async function renderData(data, container) {
+    container.innerHTML = ''; // Clear "LOADING..."
+
+    if (!data || !data.length) {
+        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        return;
+    }
+    data.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = item.img || '';
+        img.alt = item.title;
+        img.loading = 'lazy';
+        imgDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+
+        const title = document.createElement('h4');
+        title.textContent = item.title;
+
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'info-date';
+        dateDiv.textContent = item.date;
+        
+        const ftDiv = document.createElement('div');
+        ftDiv.className = 'info-ft';
+        const ftValue = (item.who && item.who !== "null") ? `WHO: ${item.who}` : "\u00A0";
+        ftDiv.textContent = ftValue;
+
+        const viewBtn = document.createElement('a');
+        viewBtn.className = 'view-btn';
+        viewBtn.href = item.link;
+        viewBtn.target = '_blank';
+        viewBtn.textContent = 'View Details';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(dateDiv);
+        contentDiv.appendChild(ftDiv);
+        contentDiv.appendChild(viewBtn);
+
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+
+        container.appendChild(card);
+    });
+}
+

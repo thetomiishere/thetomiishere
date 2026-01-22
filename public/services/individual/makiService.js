@@ -1,1 +1,11 @@
-function _0x53e3(_0xd331a3,_0x191a0b){_0xd331a3=_0xd331a3-0x15a;const _0x5a745f=_0x5a74();let _0x53e301=_0x5a745f[_0xd331a3];return _0x53e301;}const _0x2e47ab=_0x53e3;(function(_0x1b6845,_0x31e17a){const _0x4ff79b=_0x53e3,_0x3847f5=_0x1b6845();while(!![]){try{const _0xe4a807=parseInt(_0x4ff79b(0x15a))/0x1*(parseInt(_0x4ff79b(0x166))/0x2)+-parseInt(_0x4ff79b(0x167))/0x3+parseInt(_0x4ff79b(0x165))/0x4+parseInt(_0x4ff79b(0x15f))/0x5+-parseInt(_0x4ff79b(0x164))/0x6+parseInt(_0x4ff79b(0x15c))/0x7+-parseInt(_0x4ff79b(0x160))/0x8*(parseInt(_0x4ff79b(0x161))/0x9);if(_0xe4a807===_0x31e17a)break;else _0x3847f5['push'](_0x3847f5['shift']());}catch(_0x44738b){_0x3847f5['push'](_0x3847f5['shift']());}}}(_0x5a74,0xec3d0));const SHEET_API_URL=_0x2e47ab(0x15b);export async function loadMAKIData(){const _0x4f825d=_0x2e47ab;try{const _0x9dc052=await fetch(SHEET_API_URL+_0x4f825d(0x163));return await _0x9dc052[_0x4f825d(0x15e)]();}catch(_0x39201f){return console[_0x4f825d(0x15d)](_0x4f825d(0x162),_0x39201f),[];}}function _0x5a74(){const _0x547a7e=['https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec','11060938BJMkvB','error','json','8756120GoKCnC','184TqgiFb','1128636wuYBtz','Error\x20loading\x20data:','?sheet=MAKI','2871906gtPLnS','3436712qWuVsH','316EWjAqp','4211811GexcuX','9772IVvwKI'];_0x5a74=function(){return _0x547a7e;};return _0x5a74();}
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec"; 
+
+export async function loadMAKIData() {
+    try {
+        const response = await fetch(`${SHEET_API_URL}?sheet=MAKI`);
+        return await response.json();
+    } catch (err) {
+        console.error("Error loading data:", err);
+        return [];
+    }
+}

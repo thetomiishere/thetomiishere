@@ -1,1 +1,77 @@
-(function(_0x1599e1,_0x31f51c){const _0x62f26d=_0x3bec,_0x26a8cc=_0x1599e1();while(!![]){try{const _0x19d9b7=-parseInt(_0x62f26d(0xcf))/0x1*(-parseInt(_0x62f26d(0xdd))/0x2)+-parseInt(_0x62f26d(0xe3))/0x3+-parseInt(_0x62f26d(0xcb))/0x4+parseInt(_0x62f26d(0xca))/0x5*(-parseInt(_0x62f26d(0xdf))/0x6)+-parseInt(_0x62f26d(0xd2))/0x7+-parseInt(_0x62f26d(0xcd))/0x8+parseInt(_0x62f26d(0xda))/0x9;if(_0x19d9b7===_0x31f51c)break;else _0x26a8cc['push'](_0x26a8cc['shift']());}catch(_0x5081dd){_0x26a8cc['push'](_0x26a8cc['shift']());}}}(_0x2016,0x8a295));import{loadKData}from'../../services/individual/kService.js';function _0x2016(){const _0x111674=['null','446580dsIPRD','card','className','_blank','3143541AReYop','title','img','info-ft','view-btn','link','length','40uzSYkc','4174140XxSdOJ','forEach','6931464aMAAvt','k-grid','31ROOSaj','FT:\x20','date','7383152CKpLYL','textContent','getElementById','appendChild','alt','View\x20Details','src','div','43513677yzEUJM','innerHTML','createElement','21874sndbeg'];_0x2016=function(){return _0x111674;};return _0x2016();}import{setPageDisabled}from'../logistics.js';let kCache=null;export async function k(){const _0x1d4216=_0x3bec,_0x3dbef4=document[_0x1d4216(0xd4)](_0x1d4216(0xce));if(kCache){renderData(kCache,_0x3dbef4);return;}try{setPageDisabled(!![]);const _0x3bb5c3=await loadKData();kCache=_0x3bb5c3,renderData(_0x3bb5c3,_0x3dbef4);}catch(_0x1a8490){_0x3dbef4[_0x1d4216(0xdb)]='Error\x20loading\x20data.';}finally{setPageDisabled(![]);}}function _0x3bec(_0x18d007,_0x471373){_0x18d007=_0x18d007-0xc8;const _0x201646=_0x2016();let _0x3bec98=_0x201646[_0x18d007];return _0x3bec98;}async function renderData(_0x34188e,_0x5c4a0c){const _0x40a047=_0x3bec;_0x5c4a0c[_0x40a047(0xdb)]='';if(!_0x34188e||!_0x34188e[_0x40a047(0xc9)]){_0x5c4a0c[_0x40a047(0xdb)]='<p\x20class=\x22no-data\x22>No\x20content\x20found\x20for\x20this\x20member.</p>';return;}_0x34188e[_0x40a047(0xcc)](_0x5c1ae5=>{const _0x3e5e30=_0x40a047,_0x110aa4=document[_0x3e5e30(0xdc)](_0x3e5e30(0xd9));_0x110aa4[_0x3e5e30(0xe1)]=_0x3e5e30(0xe0);const _0xca1dba=document[_0x3e5e30(0xdc)](_0x3e5e30(0xd9));_0xca1dba[_0x3e5e30(0xe1)]='image-container';const _0x2241a1=document[_0x3e5e30(0xdc)](_0x3e5e30(0xe5));_0x2241a1[_0x3e5e30(0xd8)]=_0x5c1ae5[_0x3e5e30(0xe5)]||'',_0x2241a1[_0x3e5e30(0xd6)]=_0x5c1ae5[_0x3e5e30(0xe4)],_0x2241a1['loading']='lazy',_0xca1dba[_0x3e5e30(0xd5)](_0x2241a1);const _0x1db56f=document[_0x3e5e30(0xdc)](_0x3e5e30(0xd9));_0x1db56f[_0x3e5e30(0xe1)]='card-content';const _0x358d45=document[_0x3e5e30(0xdc)]('h4');_0x358d45[_0x3e5e30(0xd3)]=_0x5c1ae5[_0x3e5e30(0xe4)];const _0x371fb4=document[_0x3e5e30(0xdc)](_0x3e5e30(0xd9));_0x371fb4[_0x3e5e30(0xe1)]='info-date',_0x371fb4[_0x3e5e30(0xd3)]=_0x5c1ae5[_0x3e5e30(0xd1)];const _0x2ddb85=document['createElement'](_0x3e5e30(0xd9));_0x2ddb85[_0x3e5e30(0xe1)]=_0x3e5e30(0xe6);const _0x5e9e1a=_0x5c1ae5['ft']&&_0x5c1ae5['ft']!==_0x3e5e30(0xde)?_0x3e5e30(0xd0)+_0x5c1ae5['ft']:'\u00a0';_0x2ddb85[_0x3e5e30(0xd3)]=_0x5e9e1a;const _0x4e29d1=document[_0x3e5e30(0xdc)]('a');_0x4e29d1[_0x3e5e30(0xe1)]=_0x3e5e30(0xe7),_0x4e29d1['href']=_0x5c1ae5[_0x3e5e30(0xc8)],_0x4e29d1['target']=_0x3e5e30(0xe2),_0x4e29d1['textContent']=_0x3e5e30(0xd7),_0x1db56f[_0x3e5e30(0xd5)](_0x358d45),_0x1db56f[_0x3e5e30(0xd5)](_0x371fb4),_0x1db56f[_0x3e5e30(0xd5)](_0x2ddb85),_0x1db56f[_0x3e5e30(0xd5)](_0x4e29d1),_0x110aa4[_0x3e5e30(0xd5)](_0xca1dba),_0x110aa4['appendChild'](_0x1db56f),_0x5c4a0c[_0x3e5e30(0xd5)](_0x110aa4);});}
+import { loadKData } from '../../services/individual/kService.js';
+import { setPageDisabled } from '../logistics.js';
+
+let kCache = null;
+export async function k() {
+    const container = document.getElementById('k-grid');
+
+    if (kCache) {
+        renderData(kCache, container);
+        return;
+    }
+
+    try {
+        setPageDisabled(true);
+        const data = await loadKData();
+        kCache = data;
+        renderData(data, container);
+    } catch (err) {
+        container.innerHTML = "Error loading data.";
+    } finally {
+        setPageDisabled(false);
+    }
+}
+
+async function renderData(data, container) {
+    container.innerHTML = ''; // Clear "LOADING..."
+
+    if (!data || !data.length) {
+        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        return;
+    }
+
+    data.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = item.img || '';
+        img.alt = item.title;
+        img.loading = 'lazy';
+        imgDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+
+        const title = document.createElement('h4');
+        title.textContent = item.title;
+
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'info-date';
+        dateDiv.textContent = item.date;
+        
+        const ftDiv = document.createElement('div');
+        ftDiv.className = 'info-ft';
+        const ftValue = (item.ft && item.ft !== "null") ? `FT: ${item.ft}` : "\u00A0";
+        ftDiv.textContent = ftValue;
+
+        const viewBtn = document.createElement('a');
+        viewBtn.className = 'view-btn';
+        viewBtn.href = item.link;
+        viewBtn.target = '_blank';
+        viewBtn.textContent = 'View Details';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(dateDiv);
+        contentDiv.appendChild(ftDiv);
+        contentDiv.appendChild(viewBtn);
+
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+
+        container.appendChild(card);
+    });
+}

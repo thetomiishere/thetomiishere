@@ -1,1 +1,76 @@
-function _0x508a(_0x3b3d44,_0x44b23e){_0x3b3d44=_0x3b3d44-0x1d4;const _0x2a4efe=_0x2a4e();let _0x508aa5=_0x2a4efe[_0x3b3d44];return _0x508aa5;}(function(_0x256098,_0x320980){const _0x484c19=_0x508a,_0x4c1f9b=_0x256098();while(!![]){try{const _0x38c2c4=-parseInt(_0x484c19(0x1da))/0x1*(-parseInt(_0x484c19(0x1f1))/0x2)+parseInt(_0x484c19(0x1d7))/0x3*(-parseInt(_0x484c19(0x1fd))/0x4)+parseInt(_0x484c19(0x1ee))/0x5+-parseInt(_0x484c19(0x1e1))/0x6*(-parseInt(_0x484c19(0x1f7))/0x7)+-parseInt(_0x484c19(0x1e3))/0x8*(parseInt(_0x484c19(0x1f4))/0x9)+parseInt(_0x484c19(0x1f6))/0xa*(-parseInt(_0x484c19(0x1e4))/0xb)+-parseInt(_0x484c19(0x1ef))/0xc*(-parseInt(_0x484c19(0x1dc))/0xd);if(_0x38c2c4===_0x320980)break;else _0x4c1f9b['push'](_0x4c1f9b['shift']());}catch(_0x19be8d){_0x4c1f9b['push'](_0x4c1f9b['shift']());}}}(_0x2a4e,0xa1742));import{loadYUMAData}from'../../services/individual/yumaService.js';import{setPageDisabled}from'../logistics.js';let yumaCache=null;export async function yuma(){const _0x1a9ce6=_0x508a,_0x142589=document[_0x1a9ce6(0x1dd)](_0x1a9ce6(0x1e2));if(yumaCache){renderData(yumaCache,_0x142589);return;}try{setPageDisabled(!![]);const _0x49243d=await loadYUMAData();yumaCache=_0x49243d,renderData(_0x49243d,_0x142589);}catch(_0x2af8af){_0x142589[_0x1a9ce6(0x1e7)]=_0x1a9ce6(0x1fb);}finally{setPageDisabled(![]);}}async function renderData(_0x5d3cb7,_0x4803a4){const _0x2648a8=_0x508a;_0x4803a4[_0x2648a8(0x1e7)]='';if(!_0x5d3cb7||!_0x5d3cb7[_0x2648a8(0x1f3)]){_0x4803a4[_0x2648a8(0x1e7)]=_0x2648a8(0x1d6);return;}_0x5d3cb7[_0x2648a8(0x1d8)](_0x1e5962=>{const _0x363062=_0x2648a8,_0x418af7=document[_0x363062(0x1db)](_0x363062(0x1ea));_0x418af7[_0x363062(0x1e8)]='card';const _0x1e9dd9=document['createElement'](_0x363062(0x1ea));_0x1e9dd9['className']=_0x363062(0x1fc);const _0x184588=document['createElement'](_0x363062(0x1f2));_0x184588[_0x363062(0x1eb)]=_0x1e5962[_0x363062(0x1f2)]||'',_0x184588[_0x363062(0x1e9)]=_0x1e5962[_0x363062(0x1f5)],_0x184588['loading']=_0x363062(0x1e6),_0x1e9dd9['appendChild'](_0x184588);const _0x168628=document[_0x363062(0x1db)](_0x363062(0x1ea));_0x168628[_0x363062(0x1e8)]=_0x363062(0x1ec);const _0xe04c55=document[_0x363062(0x1db)]('h4');_0xe04c55[_0x363062(0x1f0)]=_0x1e5962[_0x363062(0x1f5)];const _0x49a3df=document[_0x363062(0x1db)](_0x363062(0x1ea));_0x49a3df[_0x363062(0x1e8)]=_0x363062(0x1f9),_0x49a3df[_0x363062(0x1f0)]=_0x1e5962[_0x363062(0x1d5)];const _0x3c622b=document[_0x363062(0x1db)]('div');_0x3c622b[_0x363062(0x1e8)]=_0x363062(0x1d9);const _0x5791a1=_0x1e5962['ft']&&_0x1e5962['ft']!==_0x363062(0x1ed)?_0x363062(0x1e5)+_0x1e5962['ft']:'\u00a0';_0x3c622b[_0x363062(0x1f0)]=_0x5791a1;const _0x554cfe=document[_0x363062(0x1db)]('a');_0x554cfe[_0x363062(0x1e8)]=_0x363062(0x1df),_0x554cfe[_0x363062(0x1e0)]=_0x1e5962[_0x363062(0x1f8)],_0x554cfe['target']=_0x363062(0x1fa),_0x554cfe[_0x363062(0x1f0)]=_0x363062(0x1d4),_0x168628[_0x363062(0x1de)](_0xe04c55),_0x168628[_0x363062(0x1de)](_0x49a3df),_0x168628[_0x363062(0x1de)](_0x3c622b),_0x168628[_0x363062(0x1de)](_0x554cfe),_0x418af7[_0x363062(0x1de)](_0x1e9dd9),_0x418af7[_0x363062(0x1de)](_0x168628),_0x4803a4[_0x363062(0x1de)](_0x418af7);});}function _0x2a4e(){const _0x24a559=['appendChild','view-btn','href','699846gXfDDR','yuma-grid','16yzlGjC','8674072lalhJu','FT:\x20','lazy','innerHTML','className','alt','div','src','card-content','null','5740125mZKfXa','5780028HavBtc','textContent','2JNJBoa','img','length','3555621wCRFCU','title','10lMeMbE','35oTydka','link','info-date','_blank','Error\x20loading\x20data.','image-container','20nhZDXD','View\x20Details','date','<p\x20class=\x22no-data\x22>No\x20content\x20found\x20for\x20this\x20member.</p>','368481hcQyJO','forEach','info-ft','159571mqxuDe','createElement','26sWzvCd','getElementById'];_0x2a4e=function(){return _0x24a559;};return _0x2a4e();}
+import { loadYUMAData } from '../../services/individual/yumaService.js';
+import { setPageDisabled } from '../logistics.js';
+
+let yumaCache = null;
+export async function yuma() {
+    const container = document.getElementById('yuma-grid');
+
+    if (yumaCache) {
+        renderData(yumaCache, container);
+        return;
+    }
+
+    try {
+        setPageDisabled(true);
+        const data = await loadYUMAData();
+        yumaCache = data;
+        renderData(data, container);
+    } catch (err) {
+        container.innerHTML = "Error loading data.";
+    } finally {
+        setPageDisabled(false);
+    }
+}
+
+async function renderData(data, container) {
+    container.innerHTML = ''; // Clear "LOADING..."
+    if (!data || !data.length) {
+        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        return;
+    }
+
+    data.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = item.img || '';
+        img.alt = item.title;
+        img.loading = 'lazy';
+        imgDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+
+        const title = document.createElement('h4');
+        title.textContent = item.title;
+
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'info-date';
+        dateDiv.textContent = item.date;
+        
+        const ftDiv = document.createElement('div');
+        ftDiv.className = 'info-ft';
+        const ftValue = (item.ft && item.ft !== "null") ? `FT: ${item.ft}` : "\u00A0";
+        ftDiv.textContent = ftValue;
+
+        const viewBtn = document.createElement('a');
+        viewBtn.className = 'view-btn';
+        viewBtn.href = item.link;
+        viewBtn.target = '_blank';
+        viewBtn.textContent = 'View Details';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(dateDiv);
+        contentDiv.appendChild(ftDiv);
+        contentDiv.appendChild(viewBtn);
+
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+
+        container.appendChild(card);
+    });
+}

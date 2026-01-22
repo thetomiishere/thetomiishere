@@ -1,1 +1,77 @@
-(function(_0x2eb729,_0x5052e5){const _0x38d662=_0x19b7,_0x68beae=_0x2eb729();while(!![]){try{const _0x5f1230=parseInt(_0x38d662(0x184))/0x1*(-parseInt(_0x38d662(0x187))/0x2)+-parseInt(_0x38d662(0x198))/0x3*(parseInt(_0x38d662(0x19a))/0x4)+-parseInt(_0x38d662(0x194))/0x5*(-parseInt(_0x38d662(0x18d))/0x6)+-parseInt(_0x38d662(0x189))/0x7+-parseInt(_0x38d662(0x180))/0x8*(-parseInt(_0x38d662(0x182))/0x9)+-parseInt(_0x38d662(0x19b))/0xa*(-parseInt(_0x38d662(0x17c))/0xb)+parseInt(_0x38d662(0x176))/0xc;if(_0x5f1230===_0x5052e5)break;else _0x68beae['push'](_0x68beae['shift']());}catch(_0x432800){_0x68beae['push'](_0x68beae['shift']());}}}(_0x253f,0x34069));function _0x19b7(_0x5a9774,_0x51f707){_0x5a9774=_0x5a9774-0x174;const _0x253f63=_0x253f();let _0x19b775=_0x253f63[_0x5a9774];return _0x19b775;}import{loadHARUAData}from'../../services/individual/haruaService.js';function _0x253f(){const _0x37862e=['6FeMHRp','img','className','date','div','card-content','href','1551265wObQTT','lazy','appendChild','title','12CAmGKd','FT:\x20','340484rQPBKo','17590teBnBI','card','src','3098832vtkHcM','info-date','createElement','image-container','Error\x20loading\x20data.','view-btn','1727tCqoZg','length','innerHTML','link','344FehRFz','target','17145gElIUI','null','5BUyKRa','forEach','View\x20Details','119914TeXpva','harua-grid','512407zrjhkn','getElementById','textContent','<p\x20class=\x22no-data\x22>No\x20content\x20found\x20for\x20this\x20member.</p>'];_0x253f=function(){return _0x37862e;};return _0x253f();}import{setPageDisabled}from'../logistics.js';let haruaCache=null;export async function harua(){const _0x5ab948=_0x19b7,_0x4a5430=document[_0x5ab948(0x18a)](_0x5ab948(0x188));if(haruaCache){renderData(haruaCache,_0x4a5430);return;}try{setPageDisabled(!![]);const _0x52abed=await loadHARUAData();haruaCache=_0x52abed,renderData(_0x52abed,_0x4a5430);}catch(_0x1dc1f1){_0x4a5430[_0x5ab948(0x17e)]=_0x5ab948(0x17a);}finally{setPageDisabled(![]);}}async function renderData(_0x1a17b8,_0x45c926){const _0x1eee63=_0x19b7;_0x45c926[_0x1eee63(0x17e)]='';if(!_0x1a17b8||!_0x1a17b8[_0x1eee63(0x17d)]){_0x45c926['innerHTML']=_0x1eee63(0x18c);return;}_0x1a17b8[_0x1eee63(0x185)](_0x4d9dbb=>{const _0x31856d=_0x1eee63,_0x381e21=document[_0x31856d(0x178)]('div');_0x381e21[_0x31856d(0x18f)]=_0x31856d(0x174);const _0x13a447=document['createElement']('div');_0x13a447[_0x31856d(0x18f)]=_0x31856d(0x179);const _0x2f00b9=document[_0x31856d(0x178)](_0x31856d(0x18e));_0x2f00b9[_0x31856d(0x175)]=_0x4d9dbb[_0x31856d(0x18e)]||'',_0x2f00b9['alt']=_0x4d9dbb[_0x31856d(0x197)],_0x2f00b9['loading']=_0x31856d(0x195),_0x13a447[_0x31856d(0x196)](_0x2f00b9);const _0x1f68ad=document['createElement'](_0x31856d(0x191));_0x1f68ad['className']=_0x31856d(0x192);const _0x15effa=document[_0x31856d(0x178)]('h4');_0x15effa[_0x31856d(0x18b)]=_0x4d9dbb[_0x31856d(0x197)];const _0x208abf=document[_0x31856d(0x178)](_0x31856d(0x191));_0x208abf[_0x31856d(0x18f)]=_0x31856d(0x177),_0x208abf[_0x31856d(0x18b)]=_0x4d9dbb[_0x31856d(0x190)];const _0x53a369=document[_0x31856d(0x178)](_0x31856d(0x191));_0x53a369[_0x31856d(0x18f)]='info-ft';const _0xda81ec=_0x4d9dbb['ft']&&_0x4d9dbb['ft']!==_0x31856d(0x183)?_0x31856d(0x199)+_0x4d9dbb['ft']:'\u00a0';_0x53a369[_0x31856d(0x18b)]=_0xda81ec;const _0x11264b=document[_0x31856d(0x178)]('a');_0x11264b[_0x31856d(0x18f)]=_0x31856d(0x17b),_0x11264b[_0x31856d(0x193)]=_0x4d9dbb[_0x31856d(0x17f)],_0x11264b[_0x31856d(0x181)]='_blank',_0x11264b[_0x31856d(0x18b)]=_0x31856d(0x186),_0x1f68ad['appendChild'](_0x15effa),_0x1f68ad[_0x31856d(0x196)](_0x208abf),_0x1f68ad[_0x31856d(0x196)](_0x53a369),_0x1f68ad[_0x31856d(0x196)](_0x11264b),_0x381e21['appendChild'](_0x13a447),_0x381e21['appendChild'](_0x1f68ad),_0x45c926[_0x31856d(0x196)](_0x381e21);});}
+import { loadHARUAData } from '../../services/individual/haruaService.js';
+import { setPageDisabled } from '../logistics.js';
+
+let haruaCache = null;
+export async function harua() {
+    const container = document.getElementById('harua-grid');
+
+    if (haruaCache) {
+        renderData(haruaCache, container);
+        return;
+    }
+
+    try {
+        setPageDisabled(true);
+        const data = await loadHARUAData();
+        haruaCache = data;
+        renderData(data, container);
+    } catch (err) {
+        container.innerHTML = "Error loading data.";
+    } finally {
+        setPageDisabled(false);
+    }
+}
+
+async function renderData(data, container) {
+    container.innerHTML = ''; // Clear "LOADING..."
+
+    if (!data || !data.length) {
+        container.innerHTML = '<p class="no-data">No content found for this member.</p>';
+        return;
+    }
+
+    data.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const imgDiv = document.createElement('div');
+        imgDiv.className = 'image-container';
+        
+        const img = document.createElement('img');
+        img.src = item.img || '';
+        img.alt = item.title;
+        img.loading = 'lazy';
+        imgDiv.appendChild(img);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'card-content';
+
+        const title = document.createElement('h4');
+        title.textContent = item.title;
+
+        const dateDiv = document.createElement('div');
+        dateDiv.className = 'info-date';
+        dateDiv.textContent = item.date;
+        
+        const ftDiv = document.createElement('div');
+        ftDiv.className = 'info-ft';
+        const ftValue = (item.ft && item.ft !== "null") ? `FT: ${item.ft}` : "\u00A0";
+        ftDiv.textContent = ftValue;
+
+        const viewBtn = document.createElement('a');
+        viewBtn.className = 'view-btn';
+        viewBtn.href = item.link;
+        viewBtn.target = '_blank';
+        viewBtn.textContent = 'View Details';
+
+        contentDiv.appendChild(title);
+        contentDiv.appendChild(dateDiv);
+        contentDiv.appendChild(ftDiv);
+        contentDiv.appendChild(viewBtn);
+
+        card.appendChild(imgDiv);
+        card.appendChild(contentDiv);
+
+        container.appendChild(card);
+    });
+}

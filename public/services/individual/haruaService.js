@@ -1,1 +1,12 @@
-function _0x1305(){const _0x44fc1f=['3308938WRjAZc','12MbeScR','json','656130WAoBIE','4264729dzkWew','1090953RoGUJn','Error\x20loading\x20data:','1119105ohxDZZ','error','397048mDNYOS','870633IVnRnU','20uIgiFP','460cYvplK'];_0x1305=function(){return _0x44fc1f;};return _0x1305();}(function(_0x86bee8,_0x5893ce){const _0x209e88=_0x274a,_0x2d08ae=_0x86bee8();while(!![]){try{const _0x57aa11=-parseInt(_0x209e88(0x81))/0x1+-parseInt(_0x209e88(0x84))/0x2+-parseInt(_0x209e88(0x7e))/0x3+-parseInt(_0x209e88(0x82))/0x4*(parseInt(_0x209e88(0x7a))/0x5)+-parseInt(_0x209e88(0x85))/0x6*(parseInt(_0x209e88(0x7b))/0x7)+parseInt(_0x209e88(0x80))/0x8+parseInt(_0x209e88(0x7c))/0x9*(parseInt(_0x209e88(0x83))/0xa);if(_0x57aa11===_0x5893ce)break;else _0x2d08ae['push'](_0x2d08ae['shift']());}catch(_0x5deffb){_0x2d08ae['push'](_0x2d08ae['shift']());}}}(_0x1305,0xd0374));const SHEET_API_URL='https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec';function _0x274a(_0x1b4953,_0x7e24f9){_0x1b4953=_0x1b4953-0x79;const _0x130507=_0x1305();let _0x274aba=_0x130507[_0x1b4953];return _0x274aba;}export async function loadHARUAData(){const _0x10b7a9=_0x274a;try{const _0x5d34e8=await fetch(SHEET_API_URL+'?sheet=HARUA');return await _0x5d34e8[_0x10b7a9(0x79)]();}catch(_0x19bc34){return console[_0x10b7a9(0x7f)](_0x10b7a9(0x7d),_0x19bc34),[];}}
+const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw/exec"; 
+//const DEPLOYMENT_ID = "AKfycbzi-kN9I1y3GQsC3nZv6AyGHRDa_q-U89pWqKWiTniavWra_uh1Jayrzf6Z3-VstcCiQw"
+
+export async function loadHARUAData() {
+    try {
+        const response = await fetch(`${SHEET_API_URL}?sheet=HARUA`);
+        return await response.json();
+    } catch (err) {
+        console.error("Error loading data:", err);
+        return [];
+    }
+}

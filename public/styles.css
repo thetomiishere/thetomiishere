@@ -113,6 +113,25 @@ header {
     padding: 8px 10px;
 }
 
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 900; /* Just below the sidebar (1000) */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+/* When the overlay is active */
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Topbar */
 .topbar {
     background: #b2c1cc;  /*#eef2f7*/
@@ -261,6 +280,33 @@ header {
 
 .grid-container .view-btn:hover {
     background: #8f9b29;
+}
+
+.page-disabled-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure this is higher than other elements */
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #b2c1cc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*
