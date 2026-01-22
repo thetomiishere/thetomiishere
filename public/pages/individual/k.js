@@ -1,5 +1,5 @@
 import { loadKData } from '../../services/individual/kService.js';
-import { setPageDisabled } from '../logistics.js';
+import { setPageDisabled, formatDate } from '../logistics.js';
 
 let kCache = null;
 export async function k() {
@@ -51,7 +51,7 @@ async function renderData(data, container) {
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'info-date';
-        dateDiv.textContent = item.date;
+        dateDiv.textContent = formatDate(item.date);
         
         const ftDiv = document.createElement('div');
         ftDiv.className = 'info-ft';

@@ -1,5 +1,5 @@
 import { loadJOData } from '../../services/individual/joService.js';
-import { setPageDisabled } from '../logistics.js';
+import { setPageDisabled, formatDate } from '../logistics.js';
 
 let joCache = null;
 export async function jo() {
@@ -51,7 +51,7 @@ async function renderData(data, container) {
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'info-date';
-        dateDiv.textContent = item.date;
+        dateDiv.textContent = formatDate(item.date);
         
         const ftDiv = document.createElement('div');
         ftDiv.className = 'info-ft';

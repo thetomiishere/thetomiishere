@@ -1,5 +1,5 @@
 import { loadFUMAData } from '../../services/individual/fumaService.js';
-import { setPageDisabled } from '../logistics.js';
+import { setPageDisabled, formatDate } from '../logistics.js';
 
 let fumaCache = null;
 export async function fuma() {
@@ -51,7 +51,7 @@ async function renderData(data, container) {
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'info-date';
-        dateDiv.textContent = item.date;
+        dateDiv.textContent = formatDate(item.date);
         
         const ftDiv = document.createElement('div');
         ftDiv.className = 'info-ft';

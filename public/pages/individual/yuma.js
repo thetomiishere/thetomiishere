@@ -1,5 +1,5 @@
 import { loadYUMAData } from '../../services/individual/yumaService.js';
-import { setPageDisabled } from '../logistics.js';
+import { setPageDisabled, formatDate } from '../logistics.js';
 
 let yumaCache = null;
 export async function yuma() {
@@ -50,7 +50,7 @@ async function renderData(data, container) {
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'info-date';
-        dateDiv.textContent = item.date;
+        dateDiv.textContent = formatDate(item.date);
         
         const ftDiv = document.createElement('div');
         ftDiv.className = 'info-ft';

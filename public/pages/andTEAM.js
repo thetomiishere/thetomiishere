@@ -1,5 +1,5 @@
 import { loadandTEAMData } from '../services/andTeamService.js';
-import { setPageDisabled } from './logistics.js';
+import { setPageDisabled, formatDate } from './logistics.js';
 
 let andTEAMCache = null;
 export async function andTEAM() {
@@ -50,7 +50,7 @@ async function renderData(data, container) {
 
         const dateDiv = document.createElement('div');
         dateDiv.className = 'info-date';
-        dateDiv.textContent = item.date;
+        dateDiv.textContent = formatDate(item.date);
         
         const ftDiv = document.createElement('div');
         ftDiv.className = 'info-ft';

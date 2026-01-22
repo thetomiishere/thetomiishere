@@ -18,3 +18,11 @@ export function setPageDisabled(disabled = true) {
         if (overlay) overlay.remove();
     }
 }
+
+export function formatDate(date){
+    if(date) {
+        const formatted = date.split('T')[0];
+        return formatted.replace(/-/g, '/')
+    }
+    return "No Date";
+}
