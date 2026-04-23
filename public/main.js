@@ -1,5 +1,5 @@
-//import { group } from './pages/group.js';
 //import { member } from './pages/member.js';
+import { homepage } from './pages/homepage.js';
 import { andTEAM } from './pages/andTEAM.js';
 import { ej } from './pages/individual/ej.js';
 import { fuma } from './pages/individual/fuma.js';
@@ -35,29 +35,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const navButtons = {
-        andTEAMBtn: { hash: '#/andTEAM', section: 'andTEAM', func: andTEAM },
-        ejBtn: { hash: '#/EJ', section: 'EJ', func: ej },
-        fumaBtn: { hash: '#/FUMA', section: 'FUMA', func: fuma },
-        kBtn: { hash: '#/K', section: 'K', func: k },
-        nicoBtn: { hash: '#/NICO', section: 'NICO', func: nico },
-        yumaBtn: { hash: '#/YUMA', section: 'YUMA', func: yuma },
-        joBtn: { hash: '#/JO', section: 'JO', func: jo },
-        haruaBtn: { hash: '#/HARUA', section: 'HARUA', func: harua },
-        takiBtn: { hash: '#/TAKI', section: 'TAKI', func: taki },
-        makiBtn: { hash: '#/MAKI', section: 'MAKI', func: maki },
-    };
+    const toggleLives = document.getElementById('toggleLives');
+    const livesSubmenu = document.getElementById('livesSubmenu');
 
-    for (const [id, { hash, section, func }] of Object.entries(navButtons)) {
-        const btn = document.getElementById(id);
-        if (!btn) continue;
-        btn.addEventListener('click', e => {
+    if (toggleLives) {
+        toggleLives.addEventListener('click', (e) => {
             e.preventDefault();
-            history.pushState({ section }, '', hash);
-            showSection(section);
-            func();
-            sidebar.classList.remove('active');
-            container.classList.remove('sidebar-open');
+            const isHidden = livesSubmenu.style.display === 'none';
+            livesSubmenu.style.display = isHidden ? 'block' : 'none';
+            toggleLives.innerText = isHidden ? 'VIEW LIVES ▴' : 'VIEW LIVES ▾';
         });
     }
     // load correct page on initial load or hash change
@@ -78,7 +64,8 @@ function closeSidebar() {
 function handleHashChange() {
     const hash = window.location.hash;
     switch (hash) {
-        case '#/andTeam': showSection('andTEAM'); andTEAM(); break;
+        case '#/home': showSection('home'); homepage(); break;
+        case '#/andTEAM': showSection('andTEAM'); andTEAM(); break;
         case '#/EJ': showSection('EJ'); ej(); break;
         case '#/FUMA': showSection('FUMA'); fuma(); break;
         case '#/K': showSection('K'); k(); break;
@@ -89,14 +76,14 @@ function handleHashChange() {
         case '#/TAKI': showSection('TAKI'); taki(); break;
         case '#/MAKI': showSection('MAKI'); maki(); break;
         default:
-            showSection('andTEAM');
-            andTEAM();
+            showSection('home');
+            homepage();
     }
 }
 
 function showSection(section) {
     closeSidebar();
-    const sections = ['andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI'];
+    const sections = ['home', 'andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI'];
     sections.forEach(id => {
         const element = document.getElementById(`${id}Section`);
         if (!element) return;

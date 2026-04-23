@@ -1,0 +1,60 @@
+.member-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.andteam-card {
+    grid-column: 1 / span 3; 
+    text-align: center;
+}
+
+.member-card {
+    text-decoration: none;
+    color: var(--text-main);
+    transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-img-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.member-logo {
+    height: auto;
+    max-width: 200px;
+    margin: 10px 0;
+    display: block;
+}
+
+.member-name {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .welcome-container h1 {
+        font-size: 1.2rem;
+    }
+    .member-logo {
+        width: 140px;
+    }
+    .member-gallery {
+        gap: 8px;
+    }
+    .member-name {
+        font-size: 11px;
+        letter-spacing: 0px;
+    }
+}

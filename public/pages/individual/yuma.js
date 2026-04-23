@@ -74,3 +74,30 @@ async function renderData(data, container) {
         container.appendChild(card);
     });
 }
+
+/*
+data.forEach((item) => {
+    const card = document.createElement('div');
+    
+    // Check if it's a twitter post or a live
+    if (item.type === 'twitter') {
+        card.className = 'x-card'; // Special styling for X
+        card.innerHTML = `
+            <div class="x-header">
+                <img src="member-avatar.jpg" class="x-avatar">
+                <div class="x-user-info">
+                    <span class="x-name">${item.memberID}</span>
+                    <span class="x-handle">@andTEAM_members</span>
+                </div>
+            </div>
+            <p class="x-text">${item.content}</p>
+            ${item.mediaUrl ? `<img src="${item.mediaUrl}" class="x-media">` : ''}
+            <div class="x-footer">${item.date}</div>
+        `;
+    } else {
+        card.className = 'card'; // Your original Live grid style
+        // ... build your original live card here ...
+    }
+    container.appendChild(card);
+});
+*/

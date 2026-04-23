@@ -1,29 +1,55 @@
-/* General Setup */
+:root {
+  --bg-main: #dad3be;
+  --bg-mute: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-light:#cccccc;
+  --bg-card: #dddddd;
+
+  --text-main: #000000;/*#516479*/
+  --text-sub: #ffffff;
+  --text-body: #e0e0e0;
+  --text-footer: #9ca3af;
+  --text-white: #ffffff;
+  --text-black: #000000;
+
+  --btn-main: #000000;
+  --btn-main-hover: #464444;
+
+  --accent-dark: #1d4ed8;
+  --accent-light: #9acbec;
+
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+
+  --spinner-bg: #f3f3f3;
+  --spinner-circle: #b2c1cc;
+}
+
 * {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
 body {
-    background-color: #b2c1cc;
+    background-color: var(--bg-main);
     margin: 0;
-    color: #e0e0e0;
+    color: var(--text-body);
     overflow-x: hidden;
 }
 
 header {
-    background-color: #b2c1cc;
+    background-color: var(--bg-main);
     text-align: center;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 /* Footer */
 .footer {
-    background-color: #b2c1cc;
+    background-color: var(--bg-main);
     text-align: right;
     margin-top: 10px;
     font-size: 13px;
-    color: #9ca3af; /*#6b7280*/
+    color: var(--text-footer);
 }
 
 /* Container */
@@ -56,13 +82,10 @@ header {
     width: 240px;
     max-width: 80vw;
     height: 100vh;
-    color: #b2c1cc;
-    background: #516479;  /*#fff*/
-    /*border-right: 1px solid #333; #e5e7eb*/
+    color: var(--bg-main);
+    background: var(--text-main);
     padding: 20px;
     z-index: 1000; 
-
-    /* hide it */
     transform: translateX(-100%); 
     transition: transform 0.3s ease;
 }
@@ -74,43 +97,44 @@ header {
 .sidebar h2, 
 .sidebar nav a {
     font-size: 16px;
-    font-weight: 600; /* Adjust this to 700 if you want it bolder */
-    color: #b2c1cc;
+    font-weight: 600;
+    color: var(--bg-main);
     text-decoration: none;
-    text-transform: uppercase; /* Optional: matches many sidebar designs */
+    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* Sidebar Header specific spacing */
 .sidebar h2 {
     margin-bottom: 20px;
     display: block;
 }
 
-.sidebar .dept {
-    background: #2a2a2a;  /*#f1f5f9*/
+/* .sidebar .dept {
+    background: #2a2a2a;
     padding: 8px;
     border-radius: 6px;
     margin-bottom: 20px;
-}
+} */
 
 .sidebar nav a {
     display: block;
-    padding: 10px 0;
+    padding: 10px 10px;
     transition: color 0.2s ease;
+    border-radius: 6px;
+    margin-bottom: 2px;
 }
 
 .sidebar nav a:hover {
-    color: #ffffff;
+    color: var(--text-white);
 }
 
 /* Maintain your Active state style */
 .sidebar a.active, 
 .sidebar nav a.active {
-    background: #ccc;
-    color: #000 !important;
+    background: var(--bg-light);
+    color: var(--text-black) !important;
     border-radius: 6px;
-    padding: 8px 10px;
+    padding: 10px 10px;
 }
 
 .sidebar-overlay {
@@ -119,8 +143,8 @@ header {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-    z-index: 900; /* Just below the sidebar (1000) */
+    background: var(--bg-overlay);
+    z-index: 900;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
@@ -132,35 +156,91 @@ header {
     visibility: visible;
 }
 
+#livesSubmenu {
+    /* Use negative margin to pull the container to the edges of the 20px sidebar padding */
+    margin-left: -10px; 
+    margin-right: -10px;
+    margin-top: 5px;
+    display: none; 
+}
+
+/* Submenu Links */
+#livesSubmenu a {
+    font-size: 14px;
+    opacity: 0.8;
+    /* Extra left padding so the text looks nested, but the background stays wide */
+    padding-left: 25px; 
+}
+
+#livesSubmenu a.active {
+    padding-left: 25px !important;
+}
+
+#toggleLives {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Topbar */
-.topbar {
-    background: #b2c1cc;  /*#eef2f7*/
-    color: #516479;
-    padding: 15px 15px;
+/* .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    
+    background: var(--bg-main);
+    color: var(--text-main);
+    padding: 8px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+} */
+
+header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 800;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    background: var(--bg-main);
+    color: var(--text-main);
+    padding: 4px 15px; 
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    margin: 0; 
 }
+
 .menu-btn {
-    background: #b2c1cc;
-    color: #516479;
+    background: var(--bg-main);
+    color: var(--text-main);
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 10px 15px;
-    font-size: 30px;
+    
+    padding: 5px 10px; 
+    
+    font-size: 24px; 
     display: flex;
-    align-items: left;
-    gap: 8px;
+    align-items: center;
+    line-height: 1;
+    transition: transform 0.2s ease;
 }
 
 .menu-btn:hover {
-    transform: translateY(-5px);
+    opacity: 0.7;
+    transform: scale(1.1); 
 }
 
 .user-info {
-    color: #516479;
+    color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -174,15 +254,67 @@ header {
 .table-header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    color: #516479;
+    color: var(--text-main);
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    padding: 10px 0;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--text-main);
+    text-transform: none;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: auto; /* This pushes the footer to the bottom of the page */
+    padding: 20px 20px;
+    text-align: center;
+    width: 100%;
+    color: var(--text-main);
+    font-size: 0.8rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: var(--text-black);
 }
 
 /* The Grid System */
 .grid-container {
     display: grid;
-    /*grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));*/
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
     width: 100%;
@@ -191,7 +323,7 @@ header {
 }
 
 .grid-container p{
-    color: #516479;
+    color: var(--text-main);
 }
 
 @media (max-width: 1024px) {
@@ -200,25 +332,24 @@ header {
     }
 }
 
-/* Mobile: 3 columns (As you requested) */
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 8px; /* Tighter gap so cards can be wider */
+        gap: 8px;
     }
     
-    .main { padding: 10px; } /* Reduce main padding to give cards more room */
+    .main { padding: 10px; }
     .content { padding: 10px 5px; }
 }
 
 /* The Card Design */
 .grid-container .card {
-    background: #516479;
+    background: var(--bg-card);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--shadow-medium);
     transition: transform 0.2s ease;
-    color: #ffffff;
+    color: var(--text-white);
 
     display: flex;
     flex-direction: column;
@@ -234,7 +365,7 @@ header {
     aspect-ratio: 16 / 9;
     height: auto;
     object-fit: cover; /* Keeps image proportions clean */
-    background-color: #ddd;
+    background-color: var(--bg-card);
     display: block;
 }
 
@@ -246,7 +377,7 @@ header {
 }
 
 .grid-container .id-badge {
-    color: #b2c1cc;
+    color: var(--text-main);
     font-weight: bold;
     font-size: 0.9rem;
 }
@@ -255,13 +386,13 @@ header {
     margin: 5px 0;
     font-size: clamp(0.6rem, 1.5vw, 1.1rem);/* Shrinks font as screen shrinks */
     overflow: hidden;
-    color: #b2c1cc;
+    color: var(--text-main);
 }
 
 .grid-container .info-date,
 .grid-container .info-ft{
     font-size: clamp(0.5rem, 1.2vw, 0.85rem);
-    color: #b2c1cc;
+    color: var(--text-main);
     margin-bottom: 10px;
 }
 
@@ -269,8 +400,8 @@ header {
     margin-top: auto;
     display: block;
     text-align: center;
-    background: #ebfd43;
-    color: #516479;
+    background: var(--btn-main);
+    color: var(--text-sub);
     text-decoration: none;
     padding: 5px;
     font-size: clamp(0.5rem, 1.2vw, 0.9rem);
@@ -279,7 +410,8 @@ header {
 }
 
 .grid-container .view-btn:hover {
-    background: #8f9b29;
+    color: var(--text-sub);
+    background: var(--btn-main-hover);
 }
 
 .page-disabled-overlay {
@@ -288,16 +420,16 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--bg-overlay);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure this is higher than other elements */
+  z-index: 1000;
 }
 
 .spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #b2c1cc;
+  border: 8px solid var(--spinner-bg);
+  border-top: 8px solid var(--spinner-circle);
   border-radius: 50%;
   width: 60px;
   height: 60px;
