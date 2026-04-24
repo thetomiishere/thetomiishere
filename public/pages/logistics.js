@@ -26,3 +26,19 @@ export function formatDate(date){
     }
     return "No Date";
 }
+
+export function renderCardSkeleton(container, count) {
+    const skeletonHTML = Array(count).fill(`
+        <div class="card skeleton-card">
+            <div class="image-container skeleton-img"></div>
+            <div class="card-content">
+                <div class="skeleton-text title-skeleton"></div>
+                <div class="skeleton-text info-skeleton"></div>
+                <div class="skeleton-text info-skeleton" style="width: 40%"></div>
+                <div class="skeleton-btn"></div>
+            </div>
+        </div>
+    `).join('');
+    
+    container.innerHTML = skeletonHTML;
+}

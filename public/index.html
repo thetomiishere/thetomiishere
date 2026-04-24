@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>thetomiishere | &TEAM Weverse Live Index</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="liveCard.css" />
     <link rel="stylesheet" href="infoCard.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="icon" href="#"> <!--favicon-->
@@ -41,16 +42,14 @@
         <!-- Main -->
         <main class="main">
             <header class="topbar">
-                <button id="menuToggle" class="menu-btn">☰</button>
+                <div class="header-left">
+                    <button id="menuToggle" class="menu-btn">☰</button>
+                </div>
+                <h1 id="pageTitle" class="header-title">HOME</h1>
+                <div class="header-right"></div>
             </header>
             <!--HOME Section-->
             <div id="homeSection" class="content" style="display: none;">
-                <!-- <div class="table-header">
-                    <h1>Welcome! Here's live index for 
-                        <img class="member-logo" src="https://officialsite.cds-jp.online/prod/profile_logo/106/58/be582f522a4d402aacabc4bab157ff9a.webp" alt="LOGO">
-                    </h1>
-                    <p>Click any photo to view their live. Or click ☰ to view menu</p>
-                </div> -->
                 <div class="table-header">
                     <div class="welcome-container">
                         <h1 class="welcome-text">Hi! Here's the Weverse live index for</h1>
@@ -62,47 +61,44 @@
 
                 <div class="member-gallery">
                     <a class="member-card" href="#/EJ">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/150/e55e3a765be64e90927ba01757327289.webp" alt="EJ"></div>
+                        <div class="member-img-wrap"><img src="" alt="EJ"></div>
                         <p class="member-name">EJ</p>
                     </a>
                     <a class="member-card" href="#/FUMA">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/151/cfb3f3637cf74d998800880a80d7b14d.webp" alt="FUMA"></div>
+                        <div class="member-img-wrap"><img src="" alt="FUMA"></div>
                         <p class="member-name">FUMA</p>
                     </a>
                     <a class="member-card" href="#/K">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/152/3b0ac49a2141456cb034445048669d02.webp" alt="K"></div>
+                        <div class="member-img-wrap"><img src="" alt="K"></div>
                         <p class="member-name">K</p>
                     </a>
-
                     <a class="member-card" href="#/NICO">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/153/99c14925144a4537a0125b955d0c477c.webp" alt="NICO"></div>
+                        <div class="member-img-wrap"><img src="" alt="NICO"></div>
                         <p class="member-name">NICO</p>
                     </a>
                     <a class="member-card" href="#/YUMA">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/154/4ff9913e087246baa83e0a2f7a0f86dc.webp" alt="YUMA"></div>
+                        <div class="member-img-wrap"><img src="" alt="YUMA"></div>
                         <p class="member-name">YUMA</p>
                     </a>
                     <a class="member-card" href="#/JO">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/155/e25f9f6985e246fa9a612044ea692170.webp" alt="JO"></div>
+                        <div class="member-img-wrap"><img src="" alt="JO"></div>
                         <p class="member-name">JO</p>
                     </a>
 
                     <a class="member-card" href="#/HARUA">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/156/7cde09694be04e588dcd080910a8a62d.webp" alt="HARUA"></div>
+                        <div class="member-img-wrap"><img src="" alt="HARUA"></div>
                         <p class="member-name">HARUA</p>
                     </a>
                     <a class="member-card" href="#/TAKI">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/157/13383d53a2444dbc82a3ea9f24f214e7.webp" alt="TAKI"></div>
+                        <div class="member-img-wrap"><img src="" alt="TAKI"></div>
                         <p class="member-name">TAKI</p>
                     </a>
                     <a class="member-card" href="#/MAKI">
-                        <div class="member-img-wrap"><img src="https://officialsite.cds-jp.online/prod/profile_member/106/162/491d07d4059d42909828f22569acf5d9.webp" alt="MAKI"></div>
+                        <div class="member-img-wrap"><img src="" alt="MAKI"></div>
                         <p class="member-name">MAKI</p>
                     </a>
                     <a class="member-card andteam-card" href="#/andTEAM">
-                        <div class="member-img-wrap">
-                            <img src="https://officialsite.cds-jp.online/prod/profile_main/106/58/1a0108aadfc34a5ca64b6fced521b96c.webp" alt="TEAM">
-                        </div>
+                        <div class="member-img-wrap"><img src="" alt="andTEAM"></div>
                     </a>
                 </div>
             </div>
@@ -110,7 +106,7 @@
             <!--&team Section-->
             <div id="andTEAMSection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h2>&TEAM</h2>
+                    <!-- <h2>&TEAM</h2> -->
                 </div>
                 <div id="andTEAM-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -120,7 +116,7 @@
             <!--juju Section-->
             <div id="EJSection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>EJ</h3>
+                    <!-- <h3>EJ</h3> -->
                 </div>
                 <div id="ej-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -130,7 +126,7 @@
             <!--fuma Section-->
             <div id="FUMASection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>FUMA</h3>
+                    <!-- <h3>FUMA</h3> -->
                 </div>
                 <div id="fuma-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -140,7 +136,7 @@
             <!--k Section-->
             <div id="KSection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>K</h3>
+                    <!-- <h3>K</h3> -->
                 </div>
                 <div id="k-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -150,7 +146,7 @@
             <!--nico Section-->
             <div id="NICOSection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>NICHOLAS</h3>
+                    <!-- <h3>NICHOLAS</h3> -->
                 </div>
                 <div id="nico-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -160,7 +156,7 @@
             <!--yuma Section-->
             <div id="YUMASection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>YUMA</h3>
+                    <!-- <h3>YUMA</h3> -->
                 </div>
                 <div id="yuma-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -170,7 +166,7 @@
             <!--jo Section-->
             <div id="JOSection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>JO</h3>
+                    <!-- <h3>JO</h3> -->
                 </div>
                 <div id="jo-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -180,7 +176,7 @@
             <!--harua Section-->
             <div id="HARUASection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>HARUA</h3>
+                    <!-- <h3>HARUA</h3> -->
                 </div>
                 <div id="harua-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -190,7 +186,7 @@
             <!--taki Section-->
             <div id="TAKISection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>TAKI</h3>
+                    <!-- <h3>TAKI</h3> -->
                 </div>
                 <div id="taki-grid" class="grid-container">
                     <p class="loading">LOADING...</p>
@@ -200,7 +196,7 @@
             <!--maki Section-->
             <div id="MAKISection" class="content" style="display: none;">
                 <div class="table-header">
-                    <h3>MAKI</h3>
+                    <!-- <h3>MAKI</h3> -->
                 </div>
                 <div id="maki-grid" class="grid-container">
                     <p class="loading">LOADING...</p>

@@ -83,6 +83,12 @@ function handleHashChange() {
 
 function showSection(section) {
     closeSidebar();
+
+    const titleElement = document.getElementById('pageTitle');
+    if (titleElement) {
+        titleElement.textContent = section === 'andTEAM' ? '&TEAM' : section.toUpperCase();
+    }
+
     const sections = ['home', 'andTEAM', 'EJ', 'FUMA', 'K', 'NICO', 'YUMA', 'JO', 'HARUA', 'TAKI', 'MAKI'];
     sections.forEach(id => {
         const element = document.getElementById(`${id}Section`);

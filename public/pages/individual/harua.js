@@ -1,5 +1,5 @@
 import { loadHARUAData } from '../../services/individual/haruaService.js';
-import { setPageDisabled, formatDate } from '../logistics.js';
+import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
 let haruaCache = null;
 export async function harua() {
@@ -11,6 +11,9 @@ export async function harua() {
     }
 
     try {
+        const skeletonCount = window.innerWidth < 600 ? 15 : 20;
+        renderCardSkeleton(container, skeletonCount);
+
         setPageDisabled(true);
         const data = await loadHARUAData();
         haruaCache = data;
@@ -23,7 +26,7 @@ export async function harua() {
 }
 
 async function renderData(data, container) {
-    container.innerHTML = ''; // Clear "LOADING..."
+    container.innerHTML = '';
 
     if (!data || !data.length) {
         container.innerHTML = '<p class="no-data">No content found for this member.</p>';

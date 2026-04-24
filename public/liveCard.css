@@ -1,0 +1,125 @@
+/* The Card Design */
+.grid-container .card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-medium);
+    transition: transform 0.2s ease;
+    color: var(--text-white);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid-container .card:hover {
+    transform: translateY(-5px);
+}
+
+.grid-container .image-container img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover; /* Keeps image proportions clean */
+    background-color: var(--bg-card);
+    display: block;
+}
+
+.grid-container .card-content {
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.grid-container .id-badge {
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.grid-container h4 {
+    margin: 5px 0;
+    font-size: clamp(0.6rem, 1.5vw, 1.1rem);/* Shrinks font as screen shrinks */
+    overflow: hidden;
+    color: var(--text-main);
+}
+
+.grid-container .info-date,
+.grid-container .info-ft{
+    font-size: clamp(0.5rem, 1.2vw, 0.85rem);
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.grid-container .view-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background: var(--btn-main);
+    color: var(--text-sub);
+    text-decoration: none;
+    padding: 5px;
+    font-size: clamp(0.5rem, 1.2vw, 0.9rem);
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.grid-container .view-btn:hover {
+    color: var(--text-sub);
+    background: var(--btn-main-hover);
+}
+
+.skeleton-card {
+    pointer-events: none;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton-img, .skeleton-text, .skeleton-btn {
+    background: linear-gradient(90deg, 
+        var(--bg-card) 25%, 
+        var(--shadow-medium) 50%, 
+        var(--bg-card) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.id-badge-skeleton {
+    width: 30%;
+    height: 0.9rem;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.title-skeleton {
+    width: 80%;
+    height: 1.2rem;
+    margin: 5px 0 12px 0;
+    border-radius: 4px;
+}
+
+.info-skeleton {
+    width: 60%;
+    height: 0.85rem;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.skeleton-btn {
+    margin-top: auto;
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}

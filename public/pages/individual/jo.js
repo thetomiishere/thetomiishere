@@ -1,5 +1,5 @@
 import { loadJOData } from '../../services/individual/joService.js';
-import { setPageDisabled, formatDate } from '../logistics.js';
+import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
 let joCache = null;
 export async function jo() {

@@ -1,19 +1,23 @@
 import { loadYUMAData } from '../../services/individual/yumaService.js';
-import { setPageDisabled, formatDate } from '../logistics.js';
+import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
 let yumaCache = null;
+
 export async function yuma() {
     const container = document.getElementById('yuma-grid');
-
     if (yumaCache) {
         renderData(yumaCache, container);
         return;
     }
 
     try {
+        const skeletonCount = window.innerWidth < 600 ? 15 : 20;
+        renderCardSkeleton(container, skeletonCount);
+
         setPageDisabled(true);
         const data = await loadYUMAData();
         yumaCache = data;
+        console.log(yumaCache);
         renderData(data, container);
     } catch (err) {
         container.innerHTML = "Error loading data.";
@@ -23,7 +27,7 @@ export async function yuma() {
 }
 
 async function renderData(data, container) {
-    container.innerHTML = ''; // Clear "LOADING..."
+    container.innerHTML = '';
     if (!data || !data.length) {
         container.innerHTML = '<p class="no-data">No content found for this member.</p>';
         return;
@@ -74,30 +78,3 @@ async function renderData(data, container) {
         container.appendChild(card);
     });
 }
-
-/*
-data.forEach((item) => {
-    const card = document.createElement('div');
-    
-    // Check if it's a twitter post or a live
-    if (item.type === 'twitter') {
-        card.className = 'x-card'; // Special styling for X
-        card.innerHTML = `
-            <div class="x-header">
-                <img src="member-avatar.jpg" class="x-avatar">
-                <div class="x-user-info">
-                    <span class="x-name">${item.memberID}</span>
-                    <span class="x-handle">@andTEAM_members</span>
-                </div>
-            </div>
-            <p class="x-text">${item.content}</p>
-            ${item.mediaUrl ? `<img src="${item.mediaUrl}" class="x-media">` : ''}
-            <div class="x-footer">${item.date}</div>
-        `;
-    } else {
-        card.className = 'card'; // Your original Live grid style
-        // ... build your original live card here ...
-    }
-    container.appendChild(card);
-});
-*/

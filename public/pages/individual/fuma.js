@@ -1,5 +1,5 @@
 import { loadFUMAData } from '../../services/individual/fumaService.js';
-import { setPageDisabled, formatDate } from '../logistics.js';
+import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
 let fumaCache = null;
 export async function fuma() {
@@ -23,7 +23,7 @@ export async function fuma() {
 }
 
 async function renderData(data, container) {
-    container.innerHTML = ''; // Clear "LOADING..."
+    container.innerHTML = '';
 
     if (!data || !data.length) {
         container.innerHTML = '<p class="no-data">No content found for this member.</p>';

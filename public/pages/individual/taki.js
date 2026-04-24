@@ -1,5 +1,5 @@
 import { loadTAKIData } from '../../services/individual/takiService.js';
-import { setPageDisabled, formatDate } from '../logistics.js';
+import { setPageDisabled, formatDate, renderCardSkeleton } from '../logistics.js';
 
 let takiCache = null;
 export async function taki() {
@@ -11,6 +11,9 @@ export async function taki() {
     }
 
     try {
+        const skeletonCount = window.innerWidth < 600 ? 15 : 20;
+        renderCardSkeleton(container, skeletonCount);
+        
         setPageDisabled(true);
         const data = await loadTAKIData();
         takiCache = data;
@@ -23,7 +26,7 @@ export async function taki() {
 }
 
 async function renderData(data, container) {
-    container.innerHTML = ''; // Clear "LOADING..."
+    container.innerHTML = '';
 
     if (!data || !data.length) {
         container.innerHTML = '<p class="no-data">No content found for this member.</p>';
